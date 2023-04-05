@@ -1,4 +1,4 @@
-from ariadne import gql, make_executable_schema
+from ariadne import gql, load_schema_from_path, make_executable_schema
 from ariadne.asgi import GraphQL
 from ariadne.asgi.handlers import GraphQLWSHandler
 from ariadne.explorer import ExplorerPlayground
@@ -7,18 +7,7 @@ from queries import query
 from subscriptions import subscription
 
 
-# Define GraphQL types
-type_defs = gql(
-    """
-    type Query {
-        hello: String!
-    }
-
-    type Subscription {
-        message: String
-    }
-"""
-)
+type_defs = load_schema_from_path("../schema.graphql")
 
 
 # Create executable GraphQL schema

@@ -1,6 +1,8 @@
 # redis-ariadne-relay-graphql-subscriptions-example
 
-## Redis
+Example [Python](https://www.python.org/) [Ariadne](https://ariadnegraphql.org/) GraphQL API server and [React](https://react.dev/) [Relay](https://relay.dev/) webapp demonstrating [GraphQL Subscriptions](https://graphql.org/blog/subscriptions-in-graphql-and-relay/). Messages entered into a [Redis](https://redis.io/) queue are displayed as notifications in the browser in real time.
+
+## Redis queue
 
 - Install Redis
 
@@ -21,7 +23,7 @@
     (integer) 1
     ```
 
-## Ariadne API server
+## Python Ariadne GraphQL API server
 
 - Install
 
@@ -51,3 +53,23 @@
 - Click the button to execute the query
 
 - Add more values to the Redis queue
+
+- Note: the URL used for Subscriptions is ws://localhost:8000/
+
+## Next.js React Relay webapp
+
+- Install
+
+    ``` sh
+    cd react-relay-webapp
+    npm install
+    ```
+- Start Relay compiler and Next.js dev server
+
+    ``` sh
+    npm run dev
+    ```
+
+- Go to http://localhost:3000 in the browser
+
+- Add more values to the Redis queue and see notifications in the browser
