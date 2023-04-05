@@ -11,18 +11,11 @@ from subscriptions import subscription
 type_defs = gql(
     """
     type Query {
-        people: [Person!]!
+        hello: String!
     }
 
     type Subscription {
-        counter: Int!
-    }
-
-    type Person {
-        firstName: String
-        lastName: String
-        age: Int
-        fullName: String
+        message: String
     }
 """
 )
