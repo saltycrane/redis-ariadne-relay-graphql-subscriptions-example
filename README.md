@@ -73,3 +73,11 @@ Example [Python](https://www.python.org/) [Ariadne](https://ariadnegraphql.org/)
 - Go to http://localhost:3000 in the browser
 
 - Add more values to the Redis queue and see notifications in the browser
+
+## Interesting files
+
+- [/schema.graphql](/schema.graphql)
+- [/ariadne-api-server/app.py](/ariadne-api-server/app.py)
+- [/ariadne-api-server/subscriptions.py](/ariadne-api-server/subscriptions.py)
+- [/react-relay-webapp/src/relay.tsx](/react-relay-webapp/src/relay.tsx)
+- [/react-relay-webapp/src/Notifications.tsx](/react-relay-webapp/src/Notifications.tsx)
